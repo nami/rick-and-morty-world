@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+	background-image: url(./images/bg4.jpg);
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Bangers', cursive;
+}
+
+.App {
+	width: 100%;
+	padding-top: 2em;
+}
+
+.locations, {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.location {
+	margin-right: 1.5em;
+}
+
+.desc {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.5em;
+}
+
+.characters {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.character {
+	margin-top: 0.5em;
+	margin-right: 1em;
+}
+
+.icons{
+	margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+	.locations {
+		display: block;
+	}
+
+	.location {
+		margin-right: 0;
+	}
+
+	.characters {
+		grid-template-columns: 1fr 1fr;
+}
+
+}
+
