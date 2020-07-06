@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 function Character(props) {
 	const [ character, setCharacter ] = useState({})
@@ -20,7 +21,9 @@ function Character(props) {
 			<figure className="image is-square icons">
     		<img className="is-rounded" src={character['image']} alt={`${character['name']}`}/>
     	</figure>
-    	<h6 className="title is-5 has-text-white">{ character['name'] }</h6>
+      <Link to={`profile/${character['id']}`}>
+        <h6 className="title is-5 has-text-white">{ character['name'] }</h6>
+      </Link>
     	<p className="subtitle is-6 has-text-white">{ character['status'] }</p>
     </div>
   );

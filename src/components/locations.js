@@ -17,8 +17,11 @@ function Locations() {
 	}, [])
 
   return (
-    <div className="locations">
-    	{ worlds.map(e => <Location key={e['id']} name={e['name']} type={e['type']} residents={e['residents']}/>) }
+    <div>
+      <h1 className="title has-text-centered">Rick & Morty Worlds</h1>
+      <div className="locations">
+        { worlds.map(e => <Location key={e['id']} name={e['name']} type={e['type']} residents={e['residents']}/>) }
+      </div>
     </div>
   );
 }
