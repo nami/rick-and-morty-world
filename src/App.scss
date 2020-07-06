@@ -44,6 +44,14 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.5em;
 }
 
+.name:hover {
+	color: white;
+}
+
+.profile {
+	height: calc(100vh - 32px);
+}
+
 @media only screen and (max-width: 768px) {
 	.locations {
 		display: block;

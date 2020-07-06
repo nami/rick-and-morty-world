@@ -22,7 +22,7 @@ function Character(props) {
     		<img className="is-rounded" src={character['image']} alt={`${character['name']}`}/>
     	</figure>
       <Link to={`profile/${character['id']}`}>
-        <h6 className="title is-5 has-text-white">{ character['name'] }</h6>
+        <h6 className="title is-5 name">{ character['name'] }</h6>
       </Link>
     	<p className="subtitle is-6 has-text-white">{ character['status'] }</p>
     </div>

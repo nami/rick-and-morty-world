@@ -10,8 +10,8 @@ function App() {
     <div className="App container is-fluid">
       <Router>
         <div>
-          <Route exact path="/" component={ Locations} />
-          <Route exact path="/profile/:id" component={Profile } />
+          <Route exact path="/" component={ Locations } />
+          <Route exact path="/profile/:id" component={ Profile } />
         </div>
       </Router>
     </div>
