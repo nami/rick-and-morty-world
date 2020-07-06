@@ -9,18 +9,32 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Bangers', cursive;
 }
 
+a {
+	color: inherit;
+}
+
 .App {
 	width: 100%;
 	padding-top: 2em;
 }
 
-.locations, {
+// bulma generating last box with 1.5em bottom margin
+.box:last-child { 
+	margin-bottom: 1.5rem; 
+}
+
+.locations {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
 .location {
 	margin-right: 1.5em;
+	opacity: 0.8;
+}
+
+.location:hover {
+	opacity: 1;
 }
 
 .desc {
@@ -49,8 +63,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profile {
-	height: calc(100vh - 32px);
+	height: calc(100vh - 20px);
 }
+
+.profile-box {
+	padding-top: 2em;
+	max-height: 90%;
+}
+
+.profile-img {
+	margin-bottom: 0.5em;
+}
+
+.profile-img img {
+	border-radius: 8px;
+	margin-bottom: 0.5em;
+}
+
+.profile-desc {
+	display: flex;
+	justify-content: space-around;
+	border-style: solid;
+	border-width: 1px;
+	max-width: 400px;
+	padding: 1em 0 1em 0;
+	margin: auto;
+}
+
+.go-back {
+	margin: 1.5em 0;
+	color: white;
+	font-size: 1.2em;
+}
+
+.go-back:hover {
+	color: black;
+}
+
 
 @media only screen and (max-width: 768px) {
 	.locations {
@@ -63,7 +112,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	.characters {
 		grid-template-columns: 1fr 1fr;
-}
-
+	}
 }
 
