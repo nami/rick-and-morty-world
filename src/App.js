@@ -3,7 +3,7 @@ import 'react-bulma-components/dist/react-bulma-components.min.css';
 import './App.scss';
 import Locations from './components/locations'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Profile from './components/Profile'
+import Profile from './components/profile'
 
 function App() {
   return (
