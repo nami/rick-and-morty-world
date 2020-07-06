@@ -28,31 +28,15 @@ self.addEventListener('install', (e) => {
 	)
 })
 
-// listen for requests
-self.addEventListener('fetch', (e) => {
-	e.respondWith(
-		caches.match(e.request).then((res) => {
-			console.log('[Service Worker] Fetching resource: ' + e.request.url)
-			return res || fetch(e.request).then((response) => {
-					return caches.open(CACHE_NAME).then((cache) => {
-			  	console.log('[Service Worker] Caching new resource: ' + e.request.url);
-			    cache.put(e.request, response.clone())
-			    return response
-			    .catch(() => caches.match('offline.html'))
-			  })
-			})
-		})
-	)
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(() => {
+                return fetch(event.request) 
+                    .catch(() => caches.match('offline.html'))
+            })
+    )
 })
-
-
-// self.addEventListener("fetch", event => {
-// 	  event.respondWith(
-// 	      fetch(event.request).catch(err =>
-// 	        self.cache.open(CACHE_NAME).then(cache => cache.match("/offline.html"))
-// 	      )
-// 	  );
-// });
 
 // activate sw
 self.addEventListener('activate', (e) => {
