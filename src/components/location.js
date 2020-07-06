@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Button } from 'react-bulma-components';
 import Characters from './characters'
 
 // images
@@ -10,9 +9,12 @@ import four from '../images/4.jpg'
 import five from '../images/5.jpg'
 import six from '../images/6.jpg'
 import seven from '../images/7.jpg'
+import eight from '../images/8.jpg'
+import nine from '../images/9.jpg'
+import ten from '../images/10.jpg'
 
 function Location(props) {
-	const imgArr = [one, two, three, four, five, six, seven]
+	const imgArr = [one, two, three, four, five, six, seven, eight, nine, ten]
 	const [clicked, setClicked] = useState(false)
 
 	const handleClick = () => {
