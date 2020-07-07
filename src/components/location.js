@@ -27,7 +27,7 @@ function Location(props) {
 
     useEffect(() => {
        setReady(true)
-    })
+    }, [])
 
   return (
     <div className="location box has-background-link has-text-white animate__animated animate__slideInUp" onClick={handleClick}>
