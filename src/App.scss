@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Ubuntu&display=swap');
 
 body {
 	background-image: url(./images/bg4.jpg);
@@ -17,16 +17,12 @@ a {
 	padding-top: 2em;
 }
 
-.post {
-  width: 100px;
-}
-
 // bulma generating last box with 1.5em bottom margin
 .box:last-child { 
 	margin-bottom: 1.5rem; 
 }
 
-.locations, .characters {
+.locations {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }

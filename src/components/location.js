@@ -17,7 +17,7 @@ function Location(props) {
     }
 
   return (
-    <div className="location box has-background-link has-text-white animate__animated animate__slideInUp" onClick={handleClick}>
+    <div className="location box has-background-dark has-text-white animate__animated animate__slideInUp" onClick={handleClick}>
     	<img src={imgArr[Math.floor(Math.random() * imgArr.length)]} alt="a rick and morty world"/>
     	<div className="desc">
     		<p>{ props.name }</p>
