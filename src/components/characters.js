@@ -8,7 +8,7 @@ function Characters(props) {
   return (
     <div className="characters">
     	{ props.residents.map((e, i) => 
-    		<LazyLoad key={e['id']} placeholder={<Skeleton circle={true} height={100} width={100}/>}>
+    		<LazyLoad key={i} placeholder={<Skeleton circle={true} height={100} width={100}/>}>
     			<Character url={e} key={i} db={new Dexie('CharactersDatabase')} />
     		</LazyLoad>)}
     </div>
