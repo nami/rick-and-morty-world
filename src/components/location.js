@@ -14,12 +14,12 @@ import nine from '../images/9.jpg'
 import ten from '../images/10.jpg'
 
 function Location(props) {
-	const imgArr = [one, two, three, four, five, six, seven, eight, nine, ten]
-	const [clicked, setClicked] = useState(false)
+    const imgArr = [one, two, three, four, five, six, seven, eight, nine, ten]
+    const [clicked, setClicked] = useState(false)
 
-	const handleClick = () => {
-		setClicked(!clicked)
-	}
+    const handleClick = () => {
+    	setClicked(!clicked)
+    }
 
   return (
     <div className="location box has-background-link has-text-white" onClick={handleClick}>

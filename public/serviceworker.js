@@ -50,3 +50,12 @@ self.addEventListener('activate', (e) => {
     })
   )
 })
+
+if (self.IndexedDB) {
+    console.log('IndexedDB is supported');
+} else {
+	console.log('IndexedDB is not supported');
+}
+
+
+// indexedDB

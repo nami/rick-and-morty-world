@@ -2,19 +2,30 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Location from './location'
 
-function Locations() {
+function Locations({db}) {
 	const [ worlds, setWorlds ] = useState([])
 
 	useEffect(() => {
+    // create db store
+    db.version(1).stores({locationsData: 'id, name, type, dimension, residents, url, created'})
+
 		let url = 'https://rickandmortyapi.com/api/location/'
 		axios.get(url)
     .then((res) => {
-    	setWorlds(res['data']['results'])
+      var results = res['data']['results']
+      db.transaction('rw', db.locationsData, async () => {
+        // get data from the db
+        let all = await db.locationsData.toArray()
+        if (!all || all.length === 0) await db.locationsData.bulkAdd(results)
+        !all || all.length === 0 ? setWorlds(results) : setWorlds(all)
+      }).catch(e => {
+        console.log(e.stack || e)
+      })
     })
     .catch((error) =>{
       console.log(error)
     })
-	}, [])
+	}, [db])
 
   return (
     <div>
