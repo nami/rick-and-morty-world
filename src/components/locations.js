@@ -34,7 +34,7 @@ function Locations({db}) {
       <h1 className="title is-2 has-text-centered">Rick & Morty Worlds</h1>
       <div className="locations">
         { worlds.map(e => 
-          <LazyLoad key={e['id']} placeholder={<Skeleton count={20}/>}>
+          <LazyLoad key={e['id']} placeholder={<Skeleton count={5}/>}>
             <Location key={e['id']} name={e['name']} type={e['type']} residents={e['residents']}/>
           </LazyLoad>
         ) }
