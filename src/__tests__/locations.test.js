@@ -1,10 +1,10 @@
-import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-
-/* Components */
+import React from "react";
+import { create } from "react-test-renderer";
 import Locations from '../components/locations'
-import Location from '../components/location'
 
-
-
+describe("Locations component", () => {
+  test("Matches the snapshot", () => {
+    const locations = create(<Locations />);
+    expect(locations.toJSON()).toMatchSnapshot();
+  });
+});
