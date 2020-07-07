@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import 'animate.css'
 
 function Character(props) {
 	const [ character, setCharacter ] = useState({})
@@ -36,7 +37,7 @@ function Character(props) {
 	}, [props])
 
   return (
-    <div className="character box has-background-primary has-text-white">
+    <div className="character box has-background-primary has-text-white animate__animated animate__slideInUp">
 			<figure className="image is-square icons">
     		<img className="is-rounded" src={character['image']} alt={`${character['name']}`}/>
     	</figure>
