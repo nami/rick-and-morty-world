@@ -18,6 +18,17 @@ a {
 	padding-top: 2em;
 }
 
+.post {
+  width: 100px;
+}
+
+.reading-progress-bar {
+  position: sticky;
+  height: 5px;
+  top: 0;
+  background-color: #ff0000;
+}
+
 // bulma generating last box with 1.5em bottom margin
 .box:last-child { 
 	margin-bottom: 1.5rem; 

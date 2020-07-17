@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Location from './location'
+import Skeleton from 'react-loading-skeleton';
+import LazyLoad from 'react-lazyload';
 
 function Locations({db}) {
 	const [ worlds, setWorlds ] = useState([])
@@ -31,7 +33,11 @@ function Locations({db}) {
     <div>
       <h1 className="title is-2 has-text-centered">Rick & Morty Worlds</h1>
       <div className="locations">
-        { worlds.map(e => <Location key={e['id']} name={e['name']} type={e['type']} residents={e['residents']}/>) }
+        { worlds.map(e => 
+          <LazyLoad key={e['id']} placeholder={<Skeleton count={20}/>}>
+            <Location key={e['id']} name={e['name']} type={e['type']} residents={e['residents']}/>
+          </LazyLoad>
+        ) }
       </div>
     </div>
   );

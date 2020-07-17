@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import 'animate.css'
+import ReactPlaceholder from 'react-placeholder';
+import "react-placeholder/lib/reactPlaceholder.css";
 
 function Character(props) {
 	const [ character, setCharacter ] = useState({})
+  const [ready, setReady] = useState(false)
 
 	useEffect(() => {
     props.db.version(1).stores({characters: 'id, name, status, species, type, gender, origin, location, image, episode, url, created'})
@@ -33,17 +37,20 @@ function Character(props) {
     .catch((error) =>{
       console.log(error)
     })
+    setReady(true)
 	}, [props])
 
   return (
-    <div className="character box has-background-primary has-text-white">
-			<figure className="image is-square icons">
-    		<img className="is-rounded" src={character['image']} alt={`${character['name']}`}/>
-    	</figure>
-      <Link to={`profile/${character['id']}`}>
-        <h6 className="title is-5 name">{ character['name'] }</h6>
-      </Link>
-    	<p className="subtitle is-6 has-text-white">{ character['status'] }</p>
+    <div className="character box has-background-primary has-text-white animate__animated animate__slideInUp">
+      <ReactPlaceholder type='round' ready={ready} rows={4} showLoadingAnimation={true}>
+  			<figure className="image is-square icons">
+      		<img className="is-rounded" src={character['image']} alt={`${character['name']}`}/>
+      	</figure>
+        <Link to={`profile/${character['id']}`}>
+          <h6 className="title is-5 name">{ character['name'] }</h6>
+        </Link>
+      	<p className="subtitle is-6 has-text-white">{ character['status'] }</p>
+      </ReactPlaceholder>
     </div>
   );
 }
