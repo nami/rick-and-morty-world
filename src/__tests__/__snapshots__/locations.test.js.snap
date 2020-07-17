@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Locations component Matches the snapshot 1`] = `
+<div>
+  <h1
+    className="title is-2 has-text-centered"
+  >
+    Rick & Morty Worlds
+  </h1>
+  <div
+    className="locations"
+  />
+</div>
+`;

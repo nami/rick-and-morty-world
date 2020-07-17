@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component Matches the snapshot 1`] = `
+<div
+  className="character box has-background-primary has-text-white animate__animated animate__slideInUp"
+>
+  <figure
+    className="image is-square icons"
+  >
+    <img
+      alt="undefined"
+      className="is-rounded"
+    />
+  </figure>
+  <a
+    href="/profile/undefined"
+    onClick={[Function]}
+  >
+    <h6
+      className="title is-5 name"
+    />
+  </a>
+  <p
+    className="subtitle is-6 has-text-white"
+  />
+</div>
+`;

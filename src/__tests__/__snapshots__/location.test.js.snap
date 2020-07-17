@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location component Matches the snapshot 1`] = `
+<div
+  className="location box has-background-link has-text-white animate__animated animate__slideInUp"
+  onClick={[Function]}
+>
+  <img
+    alt="a rick and morty world"
+    src="1.jpg"
+  />
+  <div
+    className="desc"
+  >
+    <p />
+    <p />
+  </div>
+</div>
+`;

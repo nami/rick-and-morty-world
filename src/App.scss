@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Ubuntu&display=swap');
 
 body {
 	background-image: url(./images/bg4.jpg);
@@ -14,19 +14,7 @@ a {
 }
 
 .App {
-	width: 100%;
 	padding-top: 2em;
-}
-
-.post {
-  width: 100px;
-}
-
-.reading-progress-bar {
-  position: sticky;
-  height: 5px;
-  top: 0;
-  background-color: #ff0000;
 }
 
 // bulma generating last box with 1.5em bottom margin
@@ -79,7 +67,7 @@ a {
 
 .profile-box {
 	padding-top: 2em;
-	max-height: 90%;
+	max-height: 95%;
 }
 
 .profile-img {
@@ -122,6 +110,7 @@ a {
 	}
 
 	.characters {
+		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
 }
